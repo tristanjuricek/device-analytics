@@ -7,6 +7,14 @@ kotlin {
         browser { }
     }
 
+    jvm {
+        val main by compilations.getting {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
+        }
+    }
+
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -31,5 +39,12 @@ kotlin {
                 implementation(kotlin("test-js"))
             }
         }
+
+        val jvmMain by getting {
+            dependencies {
+                api(kotlin("stdlib-jdk8"))
+            }
+        }
     }
+
 }

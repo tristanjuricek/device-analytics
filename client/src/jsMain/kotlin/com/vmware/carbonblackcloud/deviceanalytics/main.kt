@@ -1,5 +1,14 @@
 package com.vmware.carbonblackcloud.deviceanalytics
 
 fun main() {
-    console.log("hello, javascript")
+
+    val deviceAssignmentJs = DeviceAssignment(
+            Date(),
+            "device123",
+            "org123",
+            "hashKey",
+            "shardId-0001",
+            "test.example.com"
+    )
+    console.log("deviceAssignment", deviceAssignmentJs)
 }
